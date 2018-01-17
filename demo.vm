@@ -1,0 +1,22 @@
+version: "3"
+services:
+   $component.imageName:
+    image: $component.imageName
+    #if($component.environments.size() > 0)
+    environment:
+    #foreach ($env in $component.environments)
+      - "$env.key=$env.value"
+      #end
+      #end
+    ports:
+      - $component.portOut:$component.portIn
+    #if ($component.volumes.size() > 0)
+    volumes:
+    #foreach ($volume in $component.volumes)
+      - $volume.out:$volume.in
+    #end
+    #end
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure

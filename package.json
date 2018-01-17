@@ -1,0 +1,16 @@
+{
+  "name": "velocity-sample-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "shelljs": "^0.8.0",
+    "velocity": "^0.7.2",
+    "velocity.java": "^1.3.1"
+  }
+}
