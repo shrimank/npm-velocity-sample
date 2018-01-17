@@ -26,7 +26,7 @@ velocity.renderOnce("demo.vm", {component}, "./", function(err, data) {
      })
     console.log(data.toString());
     if (shell.exec('docker-compose up').code !== 0) {
-        shell.echo('Error: Git commit failed')
+        shell.echo('Error: docker-compose  up failed')
         shell.exit(1);
       }
       else{
