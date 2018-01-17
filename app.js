@@ -21,9 +21,9 @@ velocity.renderOnce("demo.vm", {component}, "./", function(err, data) {
         console.error(err);
         return;
     }
-    // fs.writeFileSync('docker-compose.yml',data.toString(),(err)=>{
-    //   console.log(err);
-    // })
+     fs.writeFileSync('docker-compose.yml',data.toString(),(err)=>{
+       console.log(err);
+     })
     console.log(data.toString());
     if (shell.exec('docker-compose up').code !== 0) {
         shell.echo('Error: Git commit failed')
